@@ -9,8 +9,8 @@ pipeline {
         }
         stage('Build') {
             steps {
-                dir('.') {
-                  build job: '../Jenkinsfile', wait: true
+                dir('..') {
+                  build job: 'Jenkinsfile', wait: true
                 }
             }
         }        
