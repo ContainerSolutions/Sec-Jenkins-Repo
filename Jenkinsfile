@@ -9,13 +9,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'cd ..'
                 sh 'ls'
                 dir('.') {
                     build job: 'Jenkinsfile', wait: true
                 }
             }
-        }        
+        }        x
         stage('Test') {
             steps {
                 echo 'Testing..'
