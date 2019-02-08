@@ -2,14 +2,16 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Start') {
             steps {
-                echo 'Building..'
-                dir ('.') { 
-                  sh('ls -l')
-                }
+                sh 'ls'
             }
         }
+        stage('Build') {
+            steps {
+                build job: './Jenkinsfile', wait: true           
+            }
+        }        
         stage('Test') {
             steps {
                 echo 'Testing..'
