@@ -5,7 +5,9 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                "ls -l".execute().text
+                dir ('.') { 
+                  sh('build.sh')
+                }
             }
         }
         stage('Test') {
