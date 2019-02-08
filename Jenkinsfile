@@ -9,8 +9,8 @@ pipeline {
         }
         stage('Build') {
             steps {
+                sh 'ls'
                 dir('.') {
-                    sh 'ls'
                     build job: 'Jenkinsfile', wait: true
                 }
             }
