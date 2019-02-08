@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 dir ('.') { 
-                  sh('build.sh')
+                  sh('ls -l')
                 }
             }
         }
