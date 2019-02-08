@@ -13,7 +13,7 @@ pipeline {
                     build job: 'Jenkinsfile', wait: true
                 }
             }
-        }        x
+        }
         stage('Test') {
             steps {
                 echo 'Testing..'
